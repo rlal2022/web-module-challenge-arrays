@@ -47,10 +47,10 @@ Use the copy function below to do the following:
 
 
 function copy(flavorsCopy) {
-  flavorsCopy = originalFlavors.slice();
+  return [...flavorsCopy]
 }
 
-console.log(originalFlavors);
+console.log(copy(originalFlavors));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -190,9 +190,17 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/) {
-  /*your code here*/
+function filterByWord(flavor, getFlavor) {
+  let filteredFlavors = [];
+  for (let i = 0; i < flavor.length; i++) {
+    if (flavor[i].includes(getFlavor)) {
+      filteredFlavors.push(flavor[i]);
+    }
+  }
+  return filteredFlavors;
 }
+
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 
