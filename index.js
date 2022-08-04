@@ -49,8 +49,8 @@ Use the copy function below to do the following:
 function copy(flavorsCopy) {
   flavorsCopy = originalFlavors.slice();
 }
-console.log(originalFlavors);
 
+console.log(originalFlavors);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -88,9 +88,16 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/) {
-  /*your code here*/
+function addFlavor(originalFlavors, newFlavor) {
+  originalFlavors.unshift(newFlavor);
+
+  return originalFlavors;
 }
+
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert"));
+
+
+
 
 
 
@@ -106,9 +113,13 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/) {
-  /*your code here*/
+function removeLastFlavor(badFlavor) {
+  badFlavor.pop();
+
+  return badFlavor;
 }
+
+
 
 
 
@@ -124,9 +135,12 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/) {
-  /*your code here*/
+function getFlavorByIndex(myFlavor, flavorNum) {
+  return myFlavor[flavorNum];
+
 }
+
+console.log(getFlavorByIndex(originalFlavors, 4));
 
 
 
@@ -144,10 +158,17 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/) {
-  /*your code here*/
+function removeFlavorByName(getFlav, flavNum) {
+
+  for (let i = 0; i < getFlav.length; i++) {
+    if (getFlav[i] === flavNum) {
+      getFlav.splice(i, 1);
+    }
+  }
+  return getFlav;
 }
 
+console.log(originalFlavors, "Rocky Road");
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
